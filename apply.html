@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ceylon Textile Suppliers - Application</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Web Development" />
+  <meta name="keywords"    content="HTML Markup" />
+  <meta name="author"      content="Amantha Rathanayaka" />
+  <link href="style/desktop.css" rel="stylesheet" media="screen and (min-width:601px)"/>
+  <link href="style/mobile.css" rel="stylesheet" media="screen and (max-width:600px)"/>
+  <script src="scripts/apply.js"></script>
+<body>
+  <header>
+    <a class="navbar-brand" href="index.html">Ceylon Textile Suppliers</a>
+    <div id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="jobs.html">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a href="apply.html">Apply</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="enhancement.html">Enhancements</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  
+  
+  <section class="application">
+    <h1>Apply for jobs here</h1>
+    <form method="post" action="http://mercury.ict.swin.edu.au/it000000/formtest.php"> 
+			
+      <label id="job-reference">Job reference number:</label>
+              <input type="text" id="jobreference" name="jobreference" maxlength="5" required><br><br>
+      
+
+              <label>First Name:</label>
+              <input type="text" id="first-name" name="first-name" maxlength="20" required><br><br>
+      
+       <label>Last Name:</label>
+              <input type="text" id="Last-name" name="Last-name" maxlength="20" required><br><br>
+      
+      <label>Date of Birthday:</label>
+      <input type="date" id="birthday" name="birthday" required><br><br>
+      
+      <fieldset>
+      <legend>Gender</legend>
+      <label for ="Male">
+      <input type ="radio" id="Male" name="gender" value="Male" required> Male
+      </label>
+      <label for ="Female">
+      <input type ="radio" id="Female" name="gender" value="Female" required> Female
+      </label>
+      <label for ="Other">
+      <input type ="radio" id="Other" name="gender" value="Other" required> Other
+      </label>
+      </fieldset>
+      <br>
+      
+       <label>Address:</label>
+              <input type="text" id="address" name="address" maxlength="40" required><br><br>
+      
+      <label>Town:</label>
+              <input type="text" id="town" name="town" maxlength="40" required><br><br>
+      
+      <label >State:</label>
+      <select id="state" name="state" >
+      <option value="VIC">VIC</option>
+      <option value="NSW">NSW</option>
+      <option value="QLD">QLD</option>
+      <option value="NT">NT</option>
+      <option value="WA">WA</option>
+      <option value="SA">SA</option>
+      <option value="TAS">TAS</option>
+      <option value="ACT">ACT</option>
+      </select>
+      <br><br>
+      
+      <label>Post-code:</label>
+              <input type="text" id="post-code" name="post-code" maxlength="4" placeholder="xxxx" required><br><br>
+      
+              <label>Email:</label>
+              <input type="email" id="email" name="email" placeholder="name@domain.com" required><br><br>
+      
+      <label>Phone number:</label>
+              <input type="tel" id="telphone" name="telphone" pattern="[0-9]{8,12}" required><br><br>
+      
+              <label> What are the skills you possess?</label><br>
+      <input type="checkbox" id="skill01" value="communication"> communication skills<br>     
+      <input type="checkbox" id="skill02" value="analytical"> Analytical skills<br> 
+      <input type="checkbox" id="skill03" value="problem-solving"> Problem-solving skills><br> 
+      <input type="checkbox" id="skill04" value="techinical"> Techinical Skils<br> 
+      <input type="checkbox" id="skill05" value="leader"> Leadership<br> 
+      <input type="checkbox" id="skill06" value="other"> Other skills><br><br>
+      
+      <label id="other_skills_checkbox">Other skills:</label><br>
+      <textarea id="other" name="other" rows="6">Inform us of your further skills.</textarea><br><br>
+      
+              <input type="submit" value="Apply">
+      <input type="reset" value="Clear">
+          </form>
+
+  </section>
+
+  <hr>
+
+  <footer>
+      <p class="task-sub">© 2023 Ceylon Textile Suppliers. All rights
+        reserved.</p>
+      <p>Contact: </p>
+      <a href="104355377@student.swin.edu.au">104355377@student.swin.edu.au</a>
+  </footer>
+
+</body>
+</html>
