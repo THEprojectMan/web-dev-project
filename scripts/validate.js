@@ -1,6 +1,6 @@
 // Function to validate the age
 function validateAge() {
-  var birthdayInput = document.getElementById('birthday');
+  var birthdayInput = document.getElementById("birthday");
   var birthday = new Date(birthdayInput.value);
   var today = new Date();
 
@@ -17,7 +17,7 @@ function validateAge() {
 
 // Function to validate the date format
 function validateDateFormat() {
-  var birthdayInput = document.getElementById('birthday');
+  var birthdayInput = document.getElementById("birthday");
   var birthdayValue = birthdayInput.value;
 
   var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
@@ -27,7 +27,7 @@ function validateDateFormat() {
 
 // Function to validate post codes
 function validatePostCodes() {
-  var postCodeInput = document.getElementById('post-code');
+  var postCodeInput = document.getElementById("post-code");
   var postCodeValue = postCodeInput.value;
 
   var postCodeRegex = /^\d{4}$/;
@@ -40,38 +40,38 @@ function handleSubmit(event) {
   event.preventDefault();
 
   if (!validateAge()) {
-    alert('Age should be between 15 and 18.');
+    alert("Age should be between 15 and 18.");
     return;
   }
 
   if (!validateDateFormat()) {
-    alert('Date format should be in dd/mm/yyyy.');
+    alert("Date format should be in dd/mm/yyyy.");
     return;
   }
 
   if (!validatePostCodes()) {
-    alert('Invalid post code.');
+    alert("Invalid post code.");
     return;
   }
 
   // Form submission code
-  var form = document.getElementById('form');
+  var form = document.getElementById("form");
   form.submit();
 }
 
 // Event listener for form submission
-var form = document.getElementById('form');
-form.addEventListener('submit', handleSubmit);
+var form = document.getElementById("form");
+form.addEventListener("submit", handleSubmit);
 
 function storeApply() {
-  if(localStorage.getItem("jobreference")){
-    document.getElementById("jobreference").value = localStorage.getItem("jobreference");
+  if (localStorage.getItem("jobreference")) {
+    document.getElementById("jobreference").value =
+      localStorage.getItem("jobreference");
   }
 }
 
-function init()
-{
+function init() {
   storeApply();
 }
 
-window.onload = inti();
+window.onload = init();
