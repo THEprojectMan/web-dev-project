@@ -74,4 +74,4 @@ function init() {
   storeApply();
 }
 
-window.onload = init();
+window.onload = () => init();
