@@ -18,6 +18,7 @@
       media="screen and (max-width:600px)"
     />
     <script src="./scripts/apply.js" defer></script>
+    <script src="./scripts/validate.js" defer></script>
   </head>
   <body>
     <header>
@@ -81,7 +82,13 @@
         /><br /><br />
 
         <label>Date of Birthday:</label>
-        <input type="date" id="birthday" name="birthday" required /><br /><br />
+        <input
+          type="date"
+          id="birthday"
+          name="birthday"
+          required
+          onsubmit="console.log('log')"
+        /><br /><br />
 
         <fieldset>
           <legend>Gender</legend>

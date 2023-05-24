@@ -1,19 +1,19 @@
 // Function to validate the age
-function validateAge() {
-  var birthdayInput = document.getElementById("birthday");
-  var birthday = new Date(birthdayInput.value);
-  var today = new Date();
+// function validateAge() {
+//   var birthdayInput = document.getElementById("birthday");
+//   var birthday = new Date(birthdayInput.value);
+//   var today = new Date();
 
-  var age = today.getFullYear() - birthday.getFullYear();
-  var monthDiff = today.getMonth() - birthday.getMonth();
-  var dayDiff = today.getDate() - birthday.getDate();
+//   var age = today.getFullYear() - birthday.getFullYear();
+//   var monthDiff = today.getMonth() - birthday.getMonth();
+//   var dayDiff = today.getDate() - birthday.getDate();
 
-  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-    age--;
-  }
+//   if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+//     age--;
+//   }
 
-  return age >= 15 && age <= 18;
-}
+//   return age >= 15 && age <= 18;
+// }
 
 // Function to validate the date format
 function validateDateFormat() {
@@ -39,15 +39,10 @@ function validatePostCodes() {
 function handleSubmit(event) {
   event.preventDefault();
 
-  if (!validateAge()) {
-    alert("Age should be between 15 and 18.");
-    return;
-  }
-
-  if (!validateDateFormat()) {
-    alert("Date format should be in dd/mm/yyyy.");
-    return;
-  }
+  // if (!validateAge()) {
+  //   alert("Age should be between 15 and 18.");
+  //   return;
+  // }
 
   if (!validatePostCodes()) {
     alert("Invalid post code.");
@@ -63,15 +58,25 @@ function handleSubmit(event) {
 var form = document.getElementById("form");
 form.addEventListener("submit", handleSubmit);
 
-function storeApply() {
-  if (localStorage.getItem("jobreference")) {
-    document.getElementById("jobreference").value =
-      localStorage.getItem("jobreference");
-  }
-}
+function init() {}
 
-function init() {
-  storeApply();
-}
+const today = new Date();
+const maxDate = new Date(
+  today.getFullYear() - 15,
+  today.getMonth(),
+  today.getDate()
+)
+  .toISOString()
+  .split("T")[0];
+const minDate = new Date(
+  today.getFullYear() - 18,
+  today.getMonth(),
+  today.getDate()
+)
+  .toISOString()
+  .split("T")[0];
+
+document.getElementById("birthday").setAttribute("max", maxDate);
+document.getElementById("birthday").setAttribute("min", minDate);
 
 window.onload = () => init();
