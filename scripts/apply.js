@@ -11,7 +11,7 @@ function storeJobRef1() {
   }
   
   function storeApply() {
-    // Add code here to store the apply information
+    
   }
   
   function init() {
